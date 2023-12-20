@@ -1,8 +1,9 @@
 import React from 'react';
 import {useEffect} from 'react'
-import './FontPage.css';
+import './Home.css';
+import NavBar from '../components/NavBar';
 
-function FrontPage(){
+function Home(){
 
     useEffect(() => { 
         getQuote();
@@ -22,11 +23,11 @@ function FrontPage(){
     return(
 
         <div className="header">
-
             <div id="quote"></div>
+             <NavBar />
             <img src="https://images.pexels.com/photos/911254/pexels-photo-911254.jpeg"/>
             </div>
     )
 }
 
-export default FrontPage;
+export default Home;

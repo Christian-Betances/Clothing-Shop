@@ -4,12 +4,8 @@ body {
   }
   
   .header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
     text-align: center;
-    border-top: 150px solid black;
+    border-top: 100px solid black;
     border-bottom: 20px solid black;
     width: 100%;
     margin: 0;

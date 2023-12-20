@@ -1,0 +1,22 @@
+nav {
+    background-color: white;
+    padding: 5px;
+    display: flex;
+  }
+
+ul{
+    border: 1px solid black;
+    text-align: center;
+    list-style: none;
+    display: flex;
+    margin-right: 20px;
+    padding: 10px;
+}
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+nav a:hover {
+    color: blue;
+  }
