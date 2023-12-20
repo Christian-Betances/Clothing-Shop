@@ -27,3 +27,19 @@ nav a:hover {
     color: rgb(0, 128, 122);
     font-size: 22px;
   }
+
+  .nightmode {
+    background-color: black;
+  }
+
+  .nightModeButton {
+    margin-left: auto;
+  }
+
+  .nightModeButton button {
+    border: 2px solid red;
+    border-color: red;
+    color: red;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0) ;
+  }
