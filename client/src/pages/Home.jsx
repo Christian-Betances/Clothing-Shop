@@ -1,12 +1,15 @@
 import React from 'react';
-import {useEffect} from 'react'
+import {useEffect, useState} from 'react'
 import './Home.css';
 import NavBar from '../components/NavBar';
 
 function Home(){
 
+  const [image, setImage] = useState('');
+
     useEffect(() => { 
         getQuote();
+        getRandomBackgroundImage();
       }, []);
     
       function getQuote() {
@@ -20,12 +23,27 @@ function Home(){
         })
       }
 
-    return(
+      function getRandomBackgroundImage() {
 
+        const image = [
+          'https://cdn.pixabay.com/photo/2023/03/30/03/56/graffiti-art-7886745_1280.jpg',
+          'https://cdn.pixabay.com/photo/2023/03/30/03/55/graffiti-art-7886741_1280.jpg',
+          'https://cdn.pixabay.com/photo/2023/03/30/03/55/graffiti-art-7886740_1280.jpg'
+        ]
+
+        const randomImage = image[Math.floor(Math.random() * image.length)]
+
+        setImage(randomImage)
+      }
+
+    return(
+        <div>
         <div className="header">
             <div id="quote"></div>
-             <NavBar />
-            <img src="https://images.pexels.com/photos/911254/pexels-photo-911254.jpeg"/>
+            
+            <NavBar />
+            </div>
+            <div className="background"  style={{ backgroundImage: `url(${image})` }}></div>
             </div>
     )
 }

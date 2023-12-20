@@ -7,10 +7,10 @@ function NavBar(){
     return (
         <nav>
         <ul>
-            <li><Link to="/">Home</Link></li>
+            <li id="Home"><Link to="/">Home</Link></li>
         </ul>
         <ul>
-            <li><Link to="/Shop">Shop</Link></li>
+            <li id="Shop"><Link to="/Shop">Shop</Link></li>
         </ul>
         </nav>
       )
