@@ -2,26 +2,15 @@ import React from 'react';
 import {useEffect, useState} from 'react'
 import './Home.css';
 import NavBar from '../components/NavBar';
+import Quote from '../Api/Quote';
 
 function Home(){
 
   const [image, setImage] = useState('');
 
     useEffect(() => { 
-        getQuote();
         getRandomBackgroundImage();
       }, []);
-    
-      function getQuote() {
-        fetch('https://api.quotable.io/random?tags=motivational')
-        .then((response)=>{
-          return response.json()
-        }).then((data) =>{
-          let message = data.content
-          console.log(JSON.stringify(data))
-          document.getElementById("quote").innerHTML = JSON.stringify(message);
-        })
-      }
 
       function getRandomBackgroundImage() {
 
@@ -39,8 +28,8 @@ function Home(){
     return(
         <div>
         <div className="header">
-            <div id="quote"></div>
-            
+        <div id="quote">
+          <Quote /> </div>
             <NavBar />
             </div>
             <div className="background"  style={{ backgroundImage: `url(${image})` }}></div>
